@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Chatbot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        background: #0d0d0d;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .chat-container {
+        width: 95%;
+        max-width: 480px;
+        background: #111;
+        border: 1px solid #222;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        height: 85vh;
+        overflow: hidden;
+        box-shadow: 0 0 25px rgba(0,255,255,0.2);
+    }
+
+    .header {
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        background: #0b0b0b;
+        border-bottom: 1px solid #222;
+    }
+
+    #messages {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+    }
+
+    .msg {
+        margin-bottom: 15px;
+        max-width: 80%;
+        padding: 10px 14px;
+        border-radius: 12px;
+        line-height: 1.4;
+        font-size: 15px;
+    }
+
+    .me {
+        background: #00ffaa22;
+        border: 1px solid #00ffaa55;
+        align-self: flex-end;
+    }
+
+    .bot {
+        background: #222;
+        border: 1px solid #444;
+        align-self: flex-start;
+    }
+
+    .input-area {
+        display: flex;
+        padding: 12px;
+        background: #0b0b0b;
+        border-top: 1px solid #222;
+    }
+
+    #userInput {
+        flex: 1;
+        padding: 11px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background: #1a1a1a;
+        color: #fff;
+        font-size: 15px;
+    }
+
+    #sendBtn {
+        margin-left: 10px;
+        padding: 11px 18px;
+        border: none;
+        border-radius: 10px;
+        background: #00ffaa;
+        color: #000;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    #sendBtn:hover {
+        background: #00ffcc;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="chat-container">
+    <div class="header">AI Chatbot</div>
+
+    <div id="messages"></div>
+
+    <div class="input-area">
+        <input id="userInput" placeholder="Ask something..." />
+        <button id="sendBtn">Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
